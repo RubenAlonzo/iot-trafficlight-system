@@ -17,6 +17,7 @@ html, body {
     border-radius: 55%;
     cursor: pointer;
     font-size: 90px;
+    box-shadow: 5px 2px 5px;
     height: 20vh;
     width: 20vh;
 }
