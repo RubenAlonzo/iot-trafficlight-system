@@ -1,0 +1,27 @@
+html, body {
+    background: rgba(100, 164, 228, 0.7);
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.main-button {
+    background: rgba(76, 175, 80, 0.7);
+    border-radius: 55%;
+    cursor: pointer;
+    font-size: 90px;
+    box-shadow: 5px 2px 5px;
+    height: 20vh;
+    width: 20vh;
+}
+
+.main-button:hover {
+    opacity: 0.6;
+}
