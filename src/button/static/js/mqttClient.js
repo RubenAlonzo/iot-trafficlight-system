@@ -1,4 +1,4 @@
-var client = mqtt.connect("ws://localhost:8888") // Configure according your ws broker
+var client = mqtt.connect("ws://localhost:8080") // Configure according your ws broker
 
 function publishTopic(topic, value){
   client.publish(topic, value);

@@ -1,4 +1,4 @@
-var client = mqtt.connect("ws://localhost:8888") // you add a ws:// url here
+var client = mqtt.connect("ws://localhost:8080") // you add a ws:// url here
 
 client.on('connect', ()=>{
   client.subscribe("button/click") // The counter should react to message from this topic
