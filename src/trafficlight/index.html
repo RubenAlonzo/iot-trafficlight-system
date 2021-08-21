@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traffic Light</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="browserMqtt.js"></script>
+    <script>
+      console.log(mqtt);
+    </script>
+    <script src="mqttClient.js"></script>
     <script defer src="index.js"></script>
 </head>
 <body>
-    <div class="traffic-light">
-        <span class="light" id="green"></span>
-        <span class="light" id="yellow"></span>
-        <span class="light" id="red"></span>
-    </div>
+  <div class="traffic-light">
+    <span class="light" id="green"></span>
+    <span class="light" id="yellow"></span>
+    <span class="light" id="red"></span>
+  </div>
 </body>
 </html>
