@@ -6,5 +6,5 @@ Current list of ports per device (development / production):
 - Button:       "http://localhost:3000"   -   "http://<vm ip>:8080"
 - Counter:       "http://localhost:3001"   -   "http://<vm ip>:8080"
 - SmartPhone:   "http://localhost:3002"   -   "http://<vm ip>:8080"
-- TrafficLight: "http://localhost:3002"   -   "http://<vm ip>:8080"
-- WebApp:       "http://localhost:3000"   -   "http://<vm ip>:8080"
+- TrafficLight: "http://localhost:3003"   -   "http://<vm ip>:8080"
+- WebApp:       "http://localhost:3004"   -   "http://<vm ip>:8080"
