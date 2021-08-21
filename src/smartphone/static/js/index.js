@@ -11,9 +11,9 @@ const shakePhone = () => {
 
 beginBTN.addEventListener("click", () => {
     shakePhone();
-    // Do something when begin button is clicked
+    treatDeviceEvent("cross-click")
 });
 
-cancel.addEventListener("click", () => {
-    // Do nothing when cancel button is clicked
+cancelBTN.addEventListener("click", () => {
+    treatDeviceEvent("cancel-click")
 })

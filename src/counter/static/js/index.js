@@ -26,3 +26,10 @@ const countRemainingTime = (deadline, icon = "🏃‍♂️", textColor = "") =>
         }
     }, 1000);
 };
+
+// TODO: Create counter regresion system 
+// and add a publish event to counter ticks
+// and another publish event to a counter color change
+
+//TODO: The counter should be subscribed to button and
+// smartphone events and react to those events accordingly

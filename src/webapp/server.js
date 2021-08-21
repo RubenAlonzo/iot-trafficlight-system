@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 // DEFINE APPLICATION LISTENER
-app.set('port', process.env.PORT || 3001); // Set to port 8080 in production
+app.set('port', process.env.PORT || 3004); // Set to port 8080 in production
 app.listen(app.get('port'), () => {
   console.log('Server on port', app.get('port'));
 });
