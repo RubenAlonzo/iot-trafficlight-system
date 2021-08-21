@@ -26,5 +26,3 @@ const countRemainingTime = (deadline, icon = "🏃‍♂️", textColor = "") =>
         }
     }, 1000);
 };
-
-// countRemainingTime(10, "🧍‍♂️", "red");

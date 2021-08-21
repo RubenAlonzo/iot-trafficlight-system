@@ -1,6 +1,7 @@
+
 const express = require('express');
 const app = express();
-app.set('port', process.env.PORT || 3001);
+app.set('port', process.env.PORT || 3003);
 
 app.listen(app.get('port'), () => {
   console.log('Server on port', app.get('port'));
@@ -24,8 +25,4 @@ app.get('/browserMqtt.js', (req, res) => {
 
 app.get('/mqttClient.js', (req, res) => {
   res.sendFile(__dirname +'/mqttClient.js');
-})
-
-app.get('/fonts/digital-7.ttf', (req, res) => {
-  res.sendFile(__dirname +'/fonts/digital-7.ttf');
 })
