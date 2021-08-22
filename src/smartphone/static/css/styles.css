@@ -13,8 +13,9 @@ body {
 }
 
 .phone-background {
-    height: 60%;
-    width: 40%;
+    height: 750px;
+    width: 250px;
+    padding: 30px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -30,7 +31,7 @@ body {
 }
 
 #cancel-button, #begin-button {
-    width: 30%;
+    width: 50%;
     height: 5%;
     margin: 5px;
     color: whitesmoke;
