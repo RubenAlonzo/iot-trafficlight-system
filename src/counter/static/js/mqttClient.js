@@ -15,7 +15,7 @@ client.on('connect', ()=>{
 client.on('message', (topic, message)=>{
   console.log(topic + ": " + message)
 
-  if(topic == smartphoneTopic){
+  if(topic == smartphoneTopic || topic == buttonTopic){
     if(message == "cross"){
       changeCounterValuesFromObject(initialGreenState);
       console.log("Cross request allowed. Counter initiated on green")

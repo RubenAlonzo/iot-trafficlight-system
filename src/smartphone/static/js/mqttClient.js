@@ -38,7 +38,7 @@ client.on('error', (err) => {
 
 // *** IOT DEVICE LOGIC ***
 
-// Receiver events from the current device and and apply smart behaviours accordingly
+// Receives events from the current device and and apply smart behaviours accordingly
 function treatDeviceEvent(eventType){
 
   // If the user request a cross and the counter is in red with more than 10 seconds,
