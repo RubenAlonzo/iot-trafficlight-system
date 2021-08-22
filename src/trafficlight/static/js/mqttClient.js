@@ -4,6 +4,7 @@ var client = mqtt.connect('ws://localhost:8080') // you add a ws:// url here
 client.on('connect', ()=>{
   client.subscribe("counter/timeleft")
   client.subscribe("counter/color")
+  console.log("Connected!")
 })
 
 // This is how mqtt listen message subscriptions. Modify actions according to topic
