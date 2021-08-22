@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Traffic Light</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <script src="../js/libs/browserMqtt.js"></script>
-    <script src="../js/mqttClient.js"></script>
-    <script defer src="../js/index.js"></script>
-</head>
-<body>
-  <div class="traffic-light">
-    <span class="light" id="green"></span>
-    <span class="light" id="yellow"></span>
-    <span class="light" id="red"></span>
-  </div>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Traffic Light</title>
+        <link rel="stylesheet" href="../css/styles.css" />
+        <script src="../js/libs/browserMqtt.js"></script>
+        <script src="../js/mqttClient.js"></script>
+        <script defer src="../js/index.js"></script>
+        <script
+            type="module"
+            src="https://cdn.jsdelivr.net/npm/web-traffic-light@1.0.2/dist/traffic-light/traffic-light.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://cdn.jsdelivr.net/npm/web-traffic-light@1.0.2/dist/traffic-light/traffic-light.js"
+        ></script>
+    </head>
+    <body>
+        <traffic-light
+            mode="three-lights"
+            current-state="on"
+            style="width: 200px"
+        ></traffic-light>
+    </body>
+    <script defer type="module">
+        import { defineCustomElements } from "https://cdn.jsdelivr.net/npm/web-traffic-light@1.0.2/loader/index.es2017.js";
+        defineCustomElements();
+    </script>
 </html>
