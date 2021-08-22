@@ -1,9 +1,17 @@
 // Allowed icons
 const crossIcon = "🏃‍♂️";
 const stayIcon = "🧍‍♂️";
+const displayableTimes = [1,2,3,4,5];
 
 // Use current interval to cancel the interval created using clearInterval()
 var currentInterval = 0;
+
+const playSound = (sound = "cross") => {
+  const audio = new Audio(`../sounds/${sound}.oga`);
+  audio.play().then(() => {
+    delete audio;
+  })
+}
 
 // Allowed colors
 const greenColor = {
@@ -73,11 +81,15 @@ const start = (timeleft = 10, color = redColor, icon = stayIcon) => {
 
     timeleft--;
 
+    if(displayableTimes.includes(timeleft + 1))
+      playSound(timeleft + 1)
+  
     if(color == redColor && timeleft < 1){ // Red count ending. Starting the green count
 
       timeleft = initialGreenState.initialTime;
       color = initialGreenState.color;
       icon =  initialGreenState.icon;
+      playSound();
     }
     if(color == greenColor && timeleft < 1){ // Green count ending. Starting the yellow count
 
