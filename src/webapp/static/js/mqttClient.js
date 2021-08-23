@@ -12,7 +12,7 @@ client.on("connect", () => {
 client.on("message", (topic, message) => {
     console.log(topic + ": " + message);
 
-    if (topic == smartphoneTopic) {
+    if (topic == buttonTopic || topic == smartphoneTopic) {
         if (message == "cross") {
             saveNew();
         }
