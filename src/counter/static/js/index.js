@@ -53,7 +53,7 @@ const setCounterContent = (icon, color = greenColor) => {
     document.querySelector(".counter").style.color = color;
 };
 
-const start = (timeleft = 10, color = redColor, icon = stayIcon) => {
+const start = (timeleft = 55, color = redColor, icon = stayIcon) => {
 
   if(timeleft > 55 || timeleft < 1){  // Make sure only counts between 1-55 are allowed
     console.log("Invalid timeleft while attempting to start the counter");

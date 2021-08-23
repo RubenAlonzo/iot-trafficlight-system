@@ -19,7 +19,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url("../assets/Phone.png");
+    background-image: url("../assets/phone-bg.png");
 }
 
 .phone-screen {
@@ -28,6 +28,18 @@ body {
     align-items: center;
     justify-content: center;
     height: 100%;
+}
+
+#user-title, #info {
+  text-align: center;
+  color: #1b1a1a;
+  font-weight: 800;
+  margin-bottom: 50px;
+  font-family: sans-serif;
+}
+
+#info{
+  color: rgb(102, 100, 100);
 }
 
 #cancel-button, #begin-button {
