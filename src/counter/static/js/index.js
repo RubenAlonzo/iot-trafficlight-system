@@ -81,7 +81,7 @@ const start = (timeleft = 55, color = redColor, icon = stayIcon) => {
 
     timeleft--;
 
-    if(displayableTimes.includes(timeleft + 1))
+    if(displayableTimes.includes(timeleft + 1) && color == yellowColor)
       playSound(timeleft + 1)
   
     if(color == redColor && timeleft < 1){ // Red count ending. Starting the green count
