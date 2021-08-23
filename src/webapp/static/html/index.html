@@ -5,22 +5,30 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../css/styles.css" />
+        <script defer src="../js/index.js"></script>
         <script src="../js/libs/browserMqtt.js"></script>
         <script src="../js/mqttClient.js"></script>
-        <script defer src="../js/index.js"></script>
         <title>Web App</title>
     </head>
     <body>
         <div class="container">
-            <h1>Historial de cruces</h1>
+            <h1>Cross History</h1>
             <table>
                 <thead>
-                    <th>Cruce Peatonal #</th>
-                    <th>Pasos realizados</th>
+                    <th>Reques ID</th>
+                    <th>Place</th>
+                    <th>Hour</th>
                 </thead>
                 <tbody>
+                  <tr>
+                  </tr>
                 </tbody>
             </table>
+            <span>
+              <strong>
+                <p id="totalSteps">Pasos totales: 0</p>
+              </strong>
+            </span>
         </div>
     </body>
 </html>
