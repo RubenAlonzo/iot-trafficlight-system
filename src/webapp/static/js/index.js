@@ -13,17 +13,21 @@ const generateGuid = () => {
     return window.URL.createObjectURL(new Blob([])).split("/").pop();
 };
 
+const getLocalTotalSteps = () => {
+    const localStorageKey = "totalSteps";
+    return localStorage.getItem(localStorageKey) ?? 0;
+};
+
 const recalculateTotalSteps = () => {
     const localStorageKey = "totalSteps";
-    const totalSteps = localStorage.getItem(localStorageKey) ?? 0;
-    const newTotalSteps = parseInt(totalSteps) + 10
+    const totalSteps = getLocalTotalSteps();
+    const newTotalSteps = parseInt(totalSteps) + 10;
     localStorage.setItem(localStorageKey, newTotalSteps);
-    return newTotalSteps
+    return newTotalSteps;
 };
 
 const getTotalStepsElement = () => {
-    return document
-        .getElementById("totalSteps")
+    return document.getElementById("totalSteps");
 };
 
 const generateRowData = () => {
@@ -35,7 +39,8 @@ const generateRowData = () => {
 };
 
 const getLocalData = () => {
-    const localData = localStorage.getItem("crossHistory") ?? JSON.stringify([]);
+    const localData =
+        localStorage.getItem("crossHistory") ?? JSON.stringify([]);
     return JSON.parse(localData);
 };
 
@@ -67,6 +72,7 @@ const renderTableRows = () => {
     tableData.forEach((row) => {
         addTableRow(row);
     });
+    getTotalStepsElement().textContent = `Total steps: ${getLocalTotalSteps()}`;
 };
 
 const saveNew = () => {
@@ -74,7 +80,6 @@ const saveNew = () => {
     addNewRow(newData);
     addTableRow(newData);
     getTotalStepsElement().textContent = `Total steps: ${recalculateTotalSteps()}`;
-}
+};
 
 renderTableRows();
-saveNew()
