@@ -17,9 +17,9 @@ client.on('message', (topic, message)=>{
 
   if(topic == smartphoneTopic || topic == buttonTopic){
     if(message == "cross"){
-      playSound();
       changeCounterValuesFromObject(initialGreenState);
       console.log("Cross request allowed. Counter initiated on green")
+      playSound();
     }
     else if(message == "cancel"){
       changeCounterValuesFromObject(initialYellowState);
